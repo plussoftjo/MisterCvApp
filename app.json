@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
+    "name": "Mister Cv",
+    "slug": "mistercv",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "mistercv",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -19,12 +19,34 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8749426160957410~6511210480"
+      },
+      "bundleIdentifier": "com.mistercv.plus",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Mister Cv - Need the permission to get your media , To help you to put your custom image to the cv."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.mistercv.plus",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "READ_PHONE_STATE",
+        "RECORD_AUDIO",
+        "READ_CONTACTS",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN"
+      ],
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8749426160957410~6367889615"
       }
     },
     "web": {

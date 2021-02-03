@@ -1,0 +1,144 @@
+{
+    "main":{
+        "header":"سيرتي الذاتية",
+        "add_new":{
+            "new_cv":"سيرة ذاتية جديدة",
+            "title":"العنوان",
+            "title_placeholder":"اختر عنوان مناسب للسيرة",
+            "public_cv":"عام",
+            "public_hint":"عندما تكون السيرة الذاتية عامة يمكن للشركات البحث عنك والضهور للاشخاص",
+            "keys":"الكلمات المفتاحية",
+            "keys_hint":"تساعد الكلمات المفتاحية الشركات للبحث عنك",
+            "categories":"فئة السيرة الذاتية",
+            "note":"ملاحظة",
+            "note_placeholder":"وصف او ملاحظة خاصة بك لن تضهر على السيرة الذاتية"
+        },
+        "empty":{
+            "empty_cvs_list":"لا يوجد سيرة ذاتية",
+            "you_can_add_new_cv":"يمكنك اضافة سيرة ذاتية جديدة من خلال زر "
+        }
+    },
+    "cv":{
+        "enums":{
+            "cv_informations":"معلومات",
+            "basics_informations":"المعلومات الرئيسية",
+            "objective":"ملخص",
+            "work_experiences":"خبرات العمل",
+            "educations":"التعليم",
+            "skills":"المهارات",
+            "preview":"معاينة",
+            "certifications":"الشهادات"
+        },
+        "cv_informations":{
+            "title":"العنوان",
+            "public_cv":"عام",
+            "public_hint":"عندما تكون السيرة الذاتية عامة يمكن للشركات البحث عنك والضهور للاشخاص",
+            "keys":"الكلمات المفتاحية",
+            "keys_hint":"تساعد الكلمات المفتاحية الشركات للبحث عنك",
+            "categories":"الفئة",
+            "note":"ملاحظة",
+            "note_placeholder":"وصف او ملاحظة خاصة بك لن تضهر على السيرة الذاتية"
+        },
+        "basics_informations":{
+            "full_name":"الأسم بالكامل",
+            "email":"البريد الالكتروني",
+            "phone":"رقم الهاتف",
+            "website":"الموقع الالكتروني",
+            "address":"العنوان",
+            "country":"الدولة",
+            "city":"المحافظة",
+            "gender":"الجنس"
+        },
+        "certifications":{
+            "title":"عنوان الشهادة",
+            "course_name":"الشهادة"
+        },
+        "educations":{
+            "course_name":"العنوان",
+            "colleague":"الجامعه",
+            "start_date":"تاريخ البداية",
+            "end_date":"تاريخ الانتهاء"
+        },
+        "summary":{
+            "title":"ملخص عنك",
+            "title_hint":"قم بتكتابة ملخص عنك "
+        },
+        "skills":{
+            "title":"العنوان",
+            "skill":"المهارة"
+        },
+        "work_experiences":{
+            "title":"عنوان الوظيفه",
+            "company":"الجهة",
+            "start_date":"تاريخ البداية",
+            "end_date":"تاريخ الانتهاء "
+        },
+        "preview":{
+            "generate_cv":"انشاء السيرة الذاتية"
+        },
+        "select_template":{
+            "title":"قم باختيار القالب",
+            "generate_cv":"انشاء السيرة الذاتية",
+            "close":"اغلاق"
+        }
+    },
+    "preview_cv":{
+        "share":"مشاركة",
+        "edit":"تعديل"
+    },
+    "auth":{
+        "name":"الاسم",
+        "phone":"رقم الهاتف",
+        "password":"رمز المرور",
+        "login":"تسجيل دخول",
+        "register":"حساب جديد",
+        "do_not_have_account":"لا تملك حساب ؟",
+        "new_account":"حساب جديد",
+        "have_account":"هل تملك حساب ؟"
+    },
+    "explore":{
+        "empty":{
+            "search":"ابحث عن سيرة ذاتية",
+            "you_want_employ":"هل تبحث عن موظف لشركتك ؟",
+            "search_in_the_app":"ابحث من داخل التطبيق عن السيرة الذاتية التي تبحث عنها"
+        },
+        "cvs":{
+            "full_name":"الاسم الكامل",
+            "gender":"الجنس",
+            "country":"الدولة",
+            "keys":"الكلمات المفتاحية"
+        },
+        "filter":{
+            "search_cvs":"ابحث عن سيرة ذاتية",
+            "any_country":"جميع الدول",
+            "select_country":"اختر دولة",
+            "country":"الدولة",
+            "gender":"الجنس"
+        }
+    },
+    "settings":{
+        "user_details":"معلومات المستخدم",
+        "languages":"اللغة",
+        "logout":"تسجيل خروج",
+        "settings":"الاعدادات",
+        "user_edit":{
+            "title":"تعديل المستخدم",
+            "name":"الاسم",
+            "phone":"رقم الهاتف"
+        },
+        "select_language":"اختر اللغة"
+    },
+    "err":{
+        "error":"يوجد مشكلة الرجاء المحاولة مرة أخرى.",
+        "complete_fields":"الرجاء اكمال جميع الحقول",
+        "login_error":"يوجد خطا في رقم الهاتف/رمز المرور"
+    },
+    "global":{
+        "save":"حفظ",
+        "add":"اضافة",
+        "delete":"حذف",
+        "close":"اغلاق",
+        "search":"بحث",
+        "next":"التالي"
+    }
+}

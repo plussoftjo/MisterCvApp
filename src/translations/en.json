@@ -1,0 +1,144 @@
+{
+    "main":{
+        "header":"My Cv",
+        "add_new":{
+            "new_cv":"New Cv",
+            "title":"Title",
+            "title_placeholder":"Title For CV",
+            "public_cv":"Public CV",
+            "public_hint":"When is public any one can see your cv.",
+            "keys":"Keys",
+            "keys_hint":"The keys help the companies to find you.",
+            "categories":"Categories",
+            "note":"Note",
+            "note_placeholder":"Description Or Note"
+        },
+        "empty":{
+            "empty_cvs_list":"Empty Cvs List",
+            "you_can_add_new_cv":"You can add new cv be press "
+        }
+    },
+    "cv":{
+        "enums":{
+            "cv_informations":"Cv Informations",
+            "basics_informations":"Basics Informations",
+            "objective":"Summary",
+            "work_experiences":"Work Experiences",
+            "educations":"Educations",
+            "skills":"Skills",
+            "preview":"Preview",
+            "certifications":"Certifications"
+        },
+        "cv_informations":{
+            "title":"Title",
+            "public_cv":"Public CV",
+            "public_hint":"When is public any one can see your cv.",
+            "keys":"Keys",
+            "keys_hint":"The keys help the companies to find you.",
+            "categories":"Categories",
+            "note":"Note",
+            "note_placeholder":"Description Or Note"
+        },
+        "basics_informations":{
+            "full_name":"Full Name",
+            "email":"Email",
+            "phone":"Phone Number",
+            "website":"Website",
+            "address":"Address",
+            "country":"Country",
+            "city":"City",
+            "gender":"Gender"
+        },
+        "certifications":{
+            "title":"Title",
+            "course_name":"Course Name"
+        },
+        "educations":{
+            "course_name":"Course Name",
+            "colleague":"Colleague Name",
+            "start_date":"Start Date",
+            "end_date":"End Date"
+        },
+        "summary":{
+            "title":"Summary",
+            "title_hint":"Ex. Engener"
+        },
+        "skills":{
+            "title":"Title",
+            "skill":"Skill"
+        },
+        "work_experiences":{
+            "title":"Job Title",
+            "company":"Company Name",
+            "start_date":"Start Date",
+            "end_date":"End Date"
+        },
+        "preview":{
+            "generate_cv":"Generate Cv"
+        },
+        "select_template":{
+            "title":"Select template",
+            "generate_cv":"Generate Cv",
+            "close":"Close"
+        }
+    },
+    "preview_cv":{
+        "share":"Share",
+        "edit":"Edit"
+    },
+    "auth":{
+        "name":"Name",
+        "phone":"Phone Number",
+        "password":"Password",
+        "login":"Login",
+        "register":"Register",
+        "do_not_have_account":"Don't Have Account ?",
+        "new_account":"New Account",
+        "have_account":"Have Account ?"
+    },
+    "explore":{
+        "empty":{
+            "search":"Search For Cvs",
+            "you_want_employ":"You want employ to your company ?",
+            "search_in_the_app":"Search in the app and get the cvs you wants"
+        },
+        "cvs":{
+            "full_name":"Full Name",
+            "gender":"Gender",
+            "country":"Country",
+            "keys":"Keys"
+        },
+        "filter":{
+            "search_cvs":"Search Cvs",
+            "any_country":"All Countries",
+            "select_country":"Select Country",
+            "country":"Country",
+            "gender":"Gender"
+        }
+    },
+    "settings":{
+        "user_details":"User Details",
+        "languages":"Languages",
+        "logout":"Logout",
+        "settings":"Settings",
+        "user_edit":{
+            "title":"Edit User",
+            "name":"Name",
+            "phone":"Phone Number"
+        },
+        "select_language":"Select Language"
+    },
+    "err":{
+        "error":"There Are Error Please Try Again.",
+        "complete_fields":"Please Complete All Fields",
+        "login_error":"There Are Error in Phone/Password."
+    },
+    "global":{
+        "save":"Save",
+        "add":"Add",
+        "delete":"Delete",
+        "close":"Close",
+        "search":"Search",
+        "next":"Next"
+    }
+}

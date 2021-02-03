@@ -1,0 +1,9 @@
+let UserType = {
+  SET_USER:"SET_USER",
+  SET_MY_CVS:"SET_MY_CVS",
+  ADD_NEW_CV:"ADD_NEW_CV",
+  SET_SELECTED_CV:"SET_SELECTED_CV",
+  SET_EXPLORE_CVS:"SET_EXPLORE_CVS"
+};
+
+export default UserType;
