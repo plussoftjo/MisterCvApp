@@ -15,10 +15,13 @@ import * as Sharing from "expo-sharing";
 import { env,Icons } from "../../../constants";
 import {translate} from '../../../translations'
 import { WebView } from "react-native-webview";
+import {Loader} from '../../../components'
 let PreviewCv = (props) => {
   let { selectedCv } = props.user;
   let {rtl} = props.locale
   let theme = useTheme();
+
+  let [load,setLoad] = React.useState(true)
 
   let SharePdf = async () => {
     const { uri: localUri } = await FileSystem.downloadAsync(
@@ -47,6 +50,9 @@ let PreviewCv = (props) => {
     <Layout style={{ flex: 1 }}>
       <TopNavigation accessoryLeft={BackAction} title="Cv" />
       <WebView
+      onLoad={() => {
+        setLoad(false)
+      }}
         style={{ height: "100%" }}
         source={{ uri: env.server + "public/PDF/" + selectedCv.uri + '.pdf' }}
       ></WebView>
@@ -86,6 +92,9 @@ let PreviewCv = (props) => {
           </Text>
         </Pressable>
       </View>
+      {load &&
+        <Loader />
+      }
     </Layout>
   );
 };

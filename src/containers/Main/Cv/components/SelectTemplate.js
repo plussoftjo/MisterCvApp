@@ -44,7 +44,7 @@ let SelectTemplate = (props) => {
   );
 
   return (
-    <View style={{ position: "absolute", left: 0, bottom: 0, width: "100%",height:"90%" }}>
+    <View style={{ position: "absolute", left: 0, bottom: 0, width: "100%" }}>
       <ContentCard>
         <Text category="h3" style={{textAlign:'left'}}>{translate("cv.select_template.title")}</Text>
         <View

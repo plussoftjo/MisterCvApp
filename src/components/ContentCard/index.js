@@ -31,8 +31,7 @@ let styles = StyleSheet.create({
         backgroundColor:constants.color,
         borderColor:constants.border_color,
         borderWidth:constants.border_width,
-        flex:1,
-        zIndex:2
+        
     },
     lineContainer:{
         paddingTop:5,

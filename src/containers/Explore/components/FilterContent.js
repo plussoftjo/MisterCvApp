@@ -105,9 +105,6 @@ let AddNew = (props) => {
 
   }
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS == "ios" ? "position" : "height"}
-    >
       <PanGestureHandler onGestureEvent={HandlerPanDown}>
         <Animated.View
           style={{
@@ -202,11 +199,11 @@ let AddNew = (props) => {
               </View>
             </ScrollView>
           </ContentCard>
+          {err && <Toast title={err} status={"danger"} />}
+      {loader && <Loader />}
         </Animated.View>
       </PanGestureHandler>
-      {err && <Toast title={err} status={"danger"} />}
-      {loader && <Loader />}
-    </KeyboardAvoidingView>
+      
   );
 };
 

@@ -22,3 +22,10 @@ export const setTemplates = (item) => {
     payload:item
   }
 }
+
+export const setExampleCv = (item) => {
+  return {
+    type:SettingsType.SET_EXAMPLE_CV,
+    payload:item
+  }
+}

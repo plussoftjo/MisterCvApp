@@ -125,112 +125,8 @@ let AddNew = (props) => {
       setErr(null);
     }, 3000);
   };
-  let Contents = () => (
-      <PanGestureHandler onGestureEvent={HandlerPanDown}>
-        <Animated.View
-          style={{
-            position: "absolute",
-            left: 0,
-            bottom: 0,
-            width: "100%",
-            transform: [{ translateY: translationAnimated }],
-            zIndex:2
-          }}
-        >
-          <ContentCard>
-            <ScrollView showsVerticalScrollIndicator={false}>
-              <View
-                style={{
-                  flexDirection: "row",
-                  alignItems: "center",
-                  borderBottomColor: "#7e7e7e",
-                  borderBottomWidth: 0.5,
-                  paddingBottom: 5,
-                  
-                }}
-              >
-                <Icon
-                  name={Icons.newCv}
-                  style={{
-                    width: Models.iconSimple.width,
-                    height: Models.iconSimple.height,
-                  }}
-                  fill={theme["text-hint-color"]}
-                />
-                <View style={{ width: 5 }}></View>
-                <Text category={"h3"}>{translate("main.add_new.new_cv")}</Text>
-              </View>
-              <View style={{ paddingVertical: 5 }}>
-                <Input
-                  placeholder={translate("main.add_new.title_placeholder")}
-                  value={data.title}
-                  onChangeText={(val) => setData({ ...data, title: val })}
-                  label={translate("main.add_new.title")}
-                />
-              </View>
-              <View style={{ paddingVertical: 5, flexDirection: "row" }}>
-                <Toggle
-                  checked={data.public}
-                  onChange={() => {
-                    setData({ ...data, public: !data.public });
-                  }}
-                >
-                  {translate("main.add_new.public_cv")}
-                </Toggle>
-              </View>
-              <Text category="s2" style={{ color: theme["text-hint-color"] }}>
-              {translate("main.add_new.public_hint")}
-              </Text>
-              {data.public && (
-                <View style={{ paddingVertical: 5 }}>
-                  <Input
-                    placeholder="ex:Eng,Desginer other"
-                    value={data.keys}
-                    onChangeText={(val) => setData({ ...data, keys: val })}
-                    label={translate("main.add_new.keys")}
-                    caption={translate("main.add_new.keys_hint")}
-                  />
-                </View>
-              )}
-              <View style={{ paddingVertical: 5 }}>
-                <Select
-                  label={translate("main.add_new.categories")}
-                  value={categories[categoriesIndex.row].title}
-                  selectedIndex={categoriesIndex}
-                  onSelect={(index) => setCategoriesIndex(index)}
-                >
-                  {categories.map((category, index) => (
-                    <SelectItem key={index} title={category.title} />
-                  ))}
-                </Select>
-              </View>
-              <View style={{ paddingVertical: 5 }}>
-                <Input
-                  placeholder={translate("main.add_new.note_placeholder")}
-                  label={translate("main.add_new.note")}
-                  value={data.note}
-                  onChangeText={(val) => setData({ ...data, note: val })}
-                  multiline={true}
-                  textStyle={{ minHeight: 42 }}
-                />
-              </View>
-              <View style={{ paddingVertical: 5 }}>
-                <Button status="success" onPress={_save}>
-                {translate("global.save")}
-                </Button>
-              </View>
-            </ScrollView>
-          </ContentCard>
-          {err && <Toast title={err} status={"danger"} />}
-      {loader && <Loader />}
-        </Animated.View>
-      </PanGestureHandler>
-      
-  );
-
-  if(Platform.OS == 'ios') {
-    return (
-      <KeyboardAvoidingView
+  return (
+    <KeyboardAvoidingView
       behavior={Platform.OS == "ios" ? "position" : "height"}
       
     >
@@ -334,13 +230,7 @@ let AddNew = (props) => {
       {err && <Toast title={err} status={"danger"} />}
       {loader && <Loader />}
     </KeyboardAvoidingView>
-    )
-  }else {
-    return (
-      <Contents />
-    )
-  }
-  
+  );
 };
 
 const mapStateToProps = (state) => {

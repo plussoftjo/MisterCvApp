@@ -58,7 +58,7 @@ let Auth = (props) => {
     role_id: 1,
     referral_code: "",
   });
-  let { navigation, setUser,setCategories,setTemplates,setMyCvs } = props;
+  let { navigation, setUser,setCategories,setTemplates,setMyCvs,setExampleCv } = props;
   let [image, setImage] = useState(null);
   let [isload, setIsLoad] = useState(false);
   let [error, setError] = useState(null);
@@ -112,6 +112,7 @@ let Auth = (props) => {
         setCategories(res.categories);
         setMyCvs(res.cvs);
         setTemplates(res.templates);
+        setExampleCv(res.exampleCv)
         navigation.navigate("MainNavigation");
       },
       (err) => {
@@ -163,6 +164,22 @@ let Auth = (props) => {
       }
     );
   };
+
+  let _skip = () => {
+    apis.main.indexWithoutAuth(async(res) => {
+      setCategories(res.categories);
+      setTemplates(res.templates);
+      setExampleCv(res.exampleCv)
+      let _RandID = 0
+      let user = {
+        ID:_RandID,
+        name:"",
+        phone:""
+      }
+      setUser(user)
+      navigation.navigate("MainNavigation");
+    },err => {console.log(err);})
+  }
 
   const LoadingIndicator = (props) => (
     <View style={{ justifyContent: "center", alignItems: "center" }}>
@@ -339,6 +356,16 @@ let Auth = (props) => {
         >
           {isload ? "Loading" : model.header == "Login" ?translate("auth.login"):translate("auth.register")}
         </Button>
+        {Platform.OS == "ios" &&
+        <Button
+          style={{ width: "80%", borderRadius: 20,marginTop:10 }}
+          onPress={() => {_skip()}}
+          status="basic"
+        >
+          {"Skip"}
+        </Button>
+        }
+        
         {model.header == "Login" ? 
         <View
           style={{
@@ -399,7 +426,8 @@ const mapDispatchToProps = (dispatch) => {
     setUser: (item) => dispatch(UserActions.setUser(item)),
     setMyCvs: (item) => dispatch(UserActions.setMyCvs(item)),
     setCategories: (item) => dispatch(SettingsActions.setCategories(item)),
-    setTemplates:item => dispatch(SettingsActions.setTemplates(item))
+    setTemplates:item => dispatch(SettingsActions.setTemplates(item)),
+    setExampleCv:item => dispatch(SettingsActions.setExampleCv(item))
   };
 };
 

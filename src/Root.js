@@ -61,7 +61,7 @@ export default function App(props) {
       <Provider store={store} style={styles.container}>
         <IconRegistry icons={EvaIconsPack} />
         <ApplicationProvider {...eva} theme={{ ...eva.light }} customMapping={mapping}>
-          {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+          <StatusBar barStyle="default" />
           <Router />
         </ApplicationProvider>
       </Provider>

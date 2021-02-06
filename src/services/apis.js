@@ -166,6 +166,13 @@ let apis = {
       }).catch(err => {
         onError(err)
       })
+    },
+    indexWithoutAuth(onSuccess,onError) {
+      axios.get(env.server + 'main/index/without_auth').then(res => {
+        onSuccess(res.data)
+      }).catch(err => {
+        onError(err)
+      })
     }
   }
 };

@@ -6,7 +6,8 @@ const intintalState = {
     rtl:false
   },
   categories:[],
-  templates:[]
+  templates:[],
+  exampleCv:{}
 };
 
 
@@ -18,6 +19,8 @@ const reducer = (state = intintalState, action) => {
         return {...state,categories:action.payload}
         case SettingsType.SET_TEMPLATES:
         return {...state,templates:action.payload}
+        case SettingsType.SET_EXAMPLE_CV:
+          return {...state,exampleCv:action.payload}
     default:
       return state;
   }

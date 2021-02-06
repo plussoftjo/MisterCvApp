@@ -22,7 +22,8 @@ let Loading = (props) => {
     setLocale, // Set Locale Language
     setMyCvs, // Set User Cvs
     setCategories, // SetCategories to settings storage
-    setTemplates
+    setTemplates,
+    setExampleCv
   } = props;
   const isFocused = useIsFocused();
   /**
@@ -37,6 +38,7 @@ let Loading = (props) => {
         setCategories(res.categories);
         setMyCvs(res.cvs);
         setTemplates(res.templates);
+        setExampleCv(res.exampleCv)
         navigation.navigate("MainNavigation");
       },
       (err) => {
@@ -126,7 +128,8 @@ const mapDispatchToProps = (dispatch) => {
     setLocale: (item) => dispatch(SettingsActions.setLocale(item)),
     setMyCvs: (item) => dispatch(UserActions.setMyCvs(item)),
     setCategories: (item) => dispatch(SettingsActions.setCategories(item)),
-    setTemplates:item => dispatch(SettingsActions.setTemplates(item))
+    setTemplates:item => dispatch(SettingsActions.setTemplates(item)),
+    setExampleCv:item => dispatch(SettingsActions.setExampleCv(item))
   };
 };
 
